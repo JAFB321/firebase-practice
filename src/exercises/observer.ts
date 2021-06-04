@@ -1,11 +1,5 @@
 import db from "../firebase/config";
 
-const user = {
-  nombre: "Enrique",
-  active: true,
-  birthdate: 0,
-};
-
 const userCollection = db.collection("users");
 
 // ------ Listen changes (Observer) -----------
