@@ -1,6 +1,2 @@
-
-
-
-const mensaje = 'Hola Mundo!';
-
-console.log( mensaje );
+// import './exercises/CRUD';
+import './exercises/queries';
