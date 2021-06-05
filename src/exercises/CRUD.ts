@@ -1,7 +1,8 @@
 import db from "../firebase/config";
 
 const user = {
-  nombre: "Enrique",
+  nombre: "Jesus",
+  salary: 9000,
   active: true,
   birthdate: 0,
 };
@@ -27,8 +28,8 @@ const update = async (id: string, data: Object) => {
   await userRef.update(data);
 };
 
-// update("KLm3eytYzDy66vaX1kV6", {
-//   active: true,
+// update("koRIQtIUya3jWzKx1qyt", {
+//   salary: 3700,
 // });
 
 // -------- set (update override) ---------------
@@ -66,7 +67,7 @@ const select = async () => {
   const dataRef3 = await userCollection.where("active", "==", true).where('nombre', '!=', 'Jesus').get();
 
 
-  const data = dataRef2.docs.map((user) => {
+  const data = dataRef.docs.map((user) => {
     return user.data();
   });
 
